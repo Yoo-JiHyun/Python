@@ -528,14 +528,14 @@ a
 # 텍스트 파일 데이터 불러오기
 # 일반적으로 텍스트 형식의 데이터를 주기억장치로 불러오면 숫자와 문자형 데이터로 구성된다.
 import pandas as pd
-data = pd.read_csv('건강데이터.csv', encoding='euc-kr')
+data = pd.read_csv('/Users/lyujihyun/Python/데이터분석과시각화/data/건강데이터.csv', encoding='euc-kr')
 data
      
 
 # 이미지 데이터 파일 불러오기 #1
 # 일반적으로 이미지 데이터를 주기억장치로 불러오면 숫자형 데이터로 구성된다.
 import imageio
-data = imageio.imread('티라노.jpg')
+data = imageio.imread('/Users/lyujihyun/Python/데이터분석과시각화/data/티라노.jpg')
 print('이미지 크기 (행, 열, 색상)', data.shape)
 print('이미지 파일 내용\n', data)
      
@@ -543,21 +543,21 @@ print('이미지 파일 내용\n', data)
 # 이미지 데이터 파일 불러오기 #2
 # Pillow 패키지를 이용하여 이미지 데이터 로드 후 변수 값을 출력하면 이미지가 출력된다.
 from PIL import Image
-data = Image.open('티라노.jpg')
+data = Image.open('/Users/lyujihyun/Python/데이터분석과시각화/data/티라노.jpg')
 data
      
 
 # 오디오 데이터 파일 불러오기 #1
 # IPython 패키지를 이용하여 오디오 파일을 로드 후 재생 함수로 출력
 import IPython.display as ipd
-ipd.Audio('common_voice_en_africa_10053.wav')
+ipd.Audio('/Users/lyujihyun/Python/데이터분석과시각화/data/common_voice_en_africa_10053.wav')
      
 
 # 오디오 데이터 파일 불러오기 #2
 # librosa 패키지를 이용하여 오디오 파일을 로드 후 파일 크기와 sampling rate 출력
 # sampling rate : 초당 획득한 소리의 갯수 (단위 Hz, 헤르츠)
 import librosa
-x, sr = librosa.load('common_voice_en_africa_10053.wav')
+x, sr = librosa.load('/Users/lyujihyun/Python/데이터분석과시각화/data/common_voice_en_africa_10053.wav')
 print('오디오 파일 크기 : ', x.shape)
 print('sampling rate : ', sr)
      
@@ -566,7 +566,7 @@ print('sampling rate : ', sr)
 import matplotlib.pyplot as plt
 import librosa.display
 
-librosa.display.waveplot(x, sr=sr)
+librosa.display.waveshow (x, sr=sr)
 plt.show()
      
 
@@ -583,7 +583,7 @@ plt.show()
 # librosa 패키지를 이용하여 오디오 파일을 로드 결과값이 반대이다.
 from scipy.io import wavfile
 
-samplerate, data = wavfile.read('common_voice_en_africa_10053.wav')
+samplerate, data = wavfile.read('/Users/lyujihyun/Python/데이터분석과시각화/data/common_voice_en_africa_10053.wav')
 print(f'- sampling rate: {samplerate}Hz')
 print(f'- data shape : {data.shape}')
      
