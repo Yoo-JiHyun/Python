@@ -1,0 +1,4 @@
+# 1. 설치 : pip install <패키지명> / conda install <패키지명>
+# 2. 설치 : pip install <패키지명>==<버전> / conda install <패키지명>=<버전>
+# 제거 : pip unistall <패키지명> / conda uninstall <패기지명>
+# 업데이트 : pip install -upgrade <패키지명> / conda install -U <패키지명>
